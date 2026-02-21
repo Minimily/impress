@@ -1,7 +1,7 @@
 use std::fs;
 
 use typst_pdf::PdfOptions;
-use gorgeous::TypstWrapperWorld;
+use impress::TypstWrapperWorld;
 
 fn main() {
     let content = r#"

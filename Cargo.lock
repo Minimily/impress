@@ -687,19 +687,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2e102e6eb644d3e0b186fc161e4460417880a0a0b87d235f2e5b8fb30f2e9e0"
 
 [[package]]
-name = "gorgeous"
-version = "0.1.0"
-dependencies = [
- "tar",
- "time",
- "typst",
- "typst-kit",
- "typst-pdf",
- "ureq",
- "zune-inflate",
-]
-
-[[package]]
 name = "half"
 version = "2.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1135,6 +1122,19 @@ name = "imagesize"
 version = "0.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09e54e57b4c48b40f7aec75635392b12b3421fa26fe8b4332e63138ed278459c"
+
+[[package]]
+name = "impress"
+version = "0.1.0"
+dependencies = [
+ "tar",
+ "time",
+ "typst",
+ "typst-kit",
+ "typst-pdf",
+ "ureq",
+ "zune-inflate",
+]
 
 [[package]]
 name = "indexmap"
