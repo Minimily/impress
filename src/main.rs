@@ -25,7 +25,7 @@ fn main() {
         .output
         .expect("Error compiling typst");
 
-    // Output to pdf and svg
+    // Output to pdf
     let pdf = typst_pdf::pdf(&document, &PdfOptions::default()).expect("Error exporting PDF");
     fs::write(format!("./{}.pdf", file_name), pdf).expect("Error writing PDF.");
     println!("Created pdf: `./{}.pdf`", file_name);
