@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="ACME Corp logo">
+    <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2563eb"/>
+            <stop offset="1" stop-color="#1d4ed8"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Mark -->
+    <circle cx="128" cy="128" r="104" fill="url(#g)"/>
+    <circle cx="128" cy="128" r="104" fill="none" stroke="#0b1220" stroke-opacity="0.18" stroke-width="6"/>
+
+    <!-- Simple "A" shape -->
+    <path d="M128 62 L186 194 H165 L152 162 H104 L91 194 H70 L128 62 Z"
+          fill="#ffffff" fill-opacity="0.96"/>
+    <path d="M112 142 H144 L128 104 Z" fill="#2563eb" fill-opacity="0.85"/>
+</svg>

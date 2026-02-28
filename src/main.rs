@@ -1,5 +1,6 @@
 use std::{env, fs, process};
 use std::fs::File;
+use std::path::Path;
 use typst_pdf::PdfOptions;
 use impress::TypstWrapperWorld;
 
@@ -13,12 +14,19 @@ fn main() {
             process::exit(1);
         }
     };
+
     let typ_file = File::open(&typ_file_path).expect("Failed to open typ file");
     let file_name = typ_file_path.split('/').last().unwrap().split('.').nth(0).unwrap();
     let content = std::io::read_to_string(typ_file).expect("Failed to read typ file");
 
+    let root_dir = Path::new(&typ_file_path)
+        .parent()
+        .unwrap_or(Path::new("."))
+        .to_string_lossy()
+        .to_string();
+
     // Create world with content.
-    let world = TypstWrapperWorld::new("../".to_owned(), content);
+    let world = TypstWrapperWorld::new(root_dir.to_owned(), content);
 
     // Render document
     let document = typst::compile(&world)

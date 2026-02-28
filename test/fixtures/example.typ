@@ -1,4 +1,12 @@
-#set page(paper: "a5")
+#set page(
+    paper: "a5",
+    header: align(left)[
+        #image("acme-logo.svg", height: 1.5em)
+        #h(0.45em)
+        *ACME Corporation*
+    ],
+)
+
 #set heading(numbering: "1.")
 
 #show link: set text(fill: blue, weight: 700)
